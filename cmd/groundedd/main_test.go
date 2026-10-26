@@ -39,7 +39,7 @@ func TestConfigDefaults(t *testing.T) {
 	t.Setenv("GROUNDED_HEALTH_ADDR", "")
 	t.Setenv("NX_INTERNAL_URL", "")
 	cfg := configFromEnv()
-	if cfg.Addr != ":23560" || cfg.HealthAddr != ":23561" {
+	if cfg.Addr != ":23580" || cfg.HealthAddr != ":23581" {
 		t.Fatalf("default addrs: got %q %q", cfg.Addr, cfg.HealthAddr)
 	}
 	if cfg.NXInternalURL != "http://127.0.0.1:20070" {

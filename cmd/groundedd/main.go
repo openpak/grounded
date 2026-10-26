@@ -35,8 +35,8 @@ type Config struct {
 
 func configFromEnv() Config {
 	return Config{
-		Addr:           envOr("GROUNDED_ADDR", ":23560"),
-		HealthAddr:     envOr("GROUNDED_HEALTH_ADDR", ":23561"),
+		Addr:           envOr("GROUNDED_ADDR", ":23580"),
+		HealthAddr:     envOr("GROUNDED_HEALTH_ADDR", ":23581"),
 		PartyRelayURL:  os.Getenv("GROUNDED_PARTY_RELAY_URL"),
 		PlayFabTitleID: os.Getenv("GROUNDED_PLAYFAB_TITLE"),
 		SCID:           os.Getenv("GROUNDED_SCID"),

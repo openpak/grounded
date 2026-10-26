@@ -28,8 +28,8 @@ go run ./cmd/groundedd
 
 | Variable | Meaning |
 | --- | --- |
-| `GROUNDED_ADDR` | stub API listen address (default `:23560`) |
-| `GROUNDED_HEALTH_ADDR` | `GET /healthz` listen address (default `:23561`) |
+| `GROUNDED_ADDR` | stub API listen address (default `:23580`) |
+| `GROUNDED_HEALTH_ADDR` | `GET /healthz` listen address (default `:23581`) |
 | `GROUNDED_PARTY_RELAY_URL` | PlayFab Party relay upstream (unset: relay stubbed) |
 | `GROUNDED_PLAYFAB_TITLE` | PlayFab TitleId (outstanding — see docs) |
 | `GROUNDED_SCID` | Xbox Service Configuration ID (outstanding) |

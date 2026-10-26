@@ -6,8 +6,8 @@ plants-vs-zombies (23540–23549) and stumble-guys (23550–23559).
 
 | Port | Use |
 | --- | --- |
-| 23560 | plain HTTP: Xbox-gate stub API (behind the TLS terminator) |
-| 23561 | `/healthz` |
-| 23562–23569 | reserved for this title (XSTS/session-directory listeners, once built) |
+| 23580 | plain HTTP: Xbox-gate stub API (behind the TLS terminator) |
+| 23581 | `/healthz` |
+| 23582–23589 | reserved for this title (XSTS/session-directory listeners, once built) |
 
 Relay/voice transport rides the playfab service's ports, not this block.
