@@ -24,8 +24,9 @@ type Config struct {
 	// PartyRelayURL is the PlayFab Party-compatible relay/voice upstream
 	// (platforms/switch/games/playfab), once it serves this title.
 	PartyRelayURL string
-	// PlayFabTitleID and SCID come from the game's pak configs; both are still
-	// outstanding (see docs/protocol.md). Empty means unconfigured.
+	// PlayFabTitleID (DB8C6, recovered from the update pak) and SCID
+	// (7492baca-c1b4-440d-a391-b7ef364a8d40, recovered from rodata VA
+	// 0x6a8751a) identify this title to Xbox services.
 	PlayFabTitleID string
 	SCID           string
 	// NXInternalURL/Key point at nx-baas for Nintendo id-token checks.
@@ -38,8 +39,8 @@ func configFromEnv() Config {
 		Addr:           envOr("GROUNDED_ADDR", ":23580"),
 		HealthAddr:     envOr("GROUNDED_HEALTH_ADDR", ":23581"),
 		PartyRelayURL:  os.Getenv("GROUNDED_PARTY_RELAY_URL"),
-		PlayFabTitleID: os.Getenv("GROUNDED_PLAYFAB_TITLE"),
-		SCID:           os.Getenv("GROUNDED_SCID"),
+		PlayFabTitleID: envOr("GROUNDED_PLAYFAB_TITLE", "DB8C6"),
+		SCID:           envOr("GROUNDED_SCID", "7492baca-c1b4-440d-a391-b7ef364a8d40"),
 		NXInternalURL:  envOr("NX_INTERNAL_URL", "http://127.0.0.1:20070"),
 		NXInternalKey:  firstNonEmpty(os.Getenv("NX_INTERNAL_KEY"), os.Getenv("OPENPAK_INTERNAL_KEY")),
 	}
