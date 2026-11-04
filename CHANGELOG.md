@@ -1,6 +1,6 @@
 # Changelog — grounded
 
-## v0.1.0 — unreleased
+## v0.1.0 — 2026-11-04
 
 - `groundedd`: skeleton for Grounded (`01006F301AE9C000`, UE4 project Maine).
   Env-driven config, `GET /healthz`, and stub `/v1/xbox/*` + `/v1/party/relay`
